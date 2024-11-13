@@ -1,1 +1,14 @@
- echo 'hello'
+pipeline {
+    agent any
+
+    stages {
+        stage('Groovy Script') {
+            steps {
+                script {
+                    echo 'This message is from the Groovy script block.'
+                }
+            }
+        }
+    }
+}
+
